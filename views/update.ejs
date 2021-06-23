@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+<center>
+  <h4>Update the Stock</h4>
+</center>
+<center>
+
+<form action="/update" method="POST">
+ 
+  <input type="hidden" id="id" name="id" value=<%= ide %> ><br>
+  <label for="stock">New Stock:</label><br>
+  <input type="text" id="nstock" name="stock" ><br><br>
+  <input type="submit" value="Submit" class="btn btn-success">
+</form> 
+</center>
+
+
+</body>
+</html>
