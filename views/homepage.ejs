@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 5px;
+    }
+    
+    tr{
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar navbar-primary">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand"  href="#"><b>FootWear</b></a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/"><i>Home</i></a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  <br><br>
+  <div class="row">
+    
+     <% for(var i=0;i<data.length;i++) { %>
+                          
+                            
+                            
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="<%= data[i].imagelink %>" target="_blank">
+          <img src="<%= data[i].imagelink %> " alt="Lights" style="height:150px; width:150px"></a>
+          <table>
+            <tr>
+              <td>Id: <%= data[i].pid %></td>
+              <td>Category: <%= data[i].category %></td>
+              <td>Type: <%= data[i].type %></td>
+              
+
+
+            </tr>
+            <tr>
+              <td>Size: <%= data[i].size %></td>
+              <td>Stock: <%= data[i].stock %></td>
+              <td>Selling Price: <%= data[i].sp  %></td>
+              
+
+
+            </tr>
+            <tr>
+              
+              <td>
+                <form action='/delete' method="post">
+                  <input type="hidden" name="id" value=<%= data[i].pid %>>
+                  <input class="btn btn-danger btn-sm fas fa-trash"  type="submit" value="Delete">
+                  </form>
+              </td>
+              <td>
+
+              </td>
+              <td>
+<a class="btn btn-info btn-sm" href="/updatestock/<%= data[i].pid %>">Edit </a>
+              </td>
+            </tr>
+          </table>
+      
+    </div>
+    
+    </div>
+    <% } %>
+    
+  </div>
+  <br>
+    <a href="/create" class="btn btn-primary ">
+      <span class="glyphicon glyphicon-plus"></span> Add Product
+    </a>
+<br>
+<br>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+  
+
+      
+      
+
+    
