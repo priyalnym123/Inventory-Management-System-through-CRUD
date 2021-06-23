@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+      <title>Fashion Feet</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="style.css">
+       <!-- Theme style -->
+   
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <center><h4 class="c1">Add a new Product</h4></center>
+    <br>
+    <br>
+    <center>
+    <div class="container">
+   
+  
+      <form action='/AddData' method="POST">
+        
+          
+         
+                    <div class="form-group">
+                      <label for="inputName">Product Id</label>
+                      <input type="number" placeholder="Enter product Id"  name="pid" required><br>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputDescription">Product Category</label>
+                      <input type="text" placeholder="Enter Category" name="category" required><br>
+                    </div>
+                    <div class="form-group">
+                      <label>Type of the product:</label> &nbsp;
+                      <input type="text" placeholder="Enter Type"   name="type" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Size:</label>
+                      <input type="number" placeholder="Enter size"   name="size" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Stock:</label>
+                      <input type="number" placeholder="Enter stock"   name="stock" required>
+                    </div>
+                    <div class="form-group">
+                      <label>price:</label>
+                      <input type="number"  placeholder="Enter price"  name="sp" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Image Link</label>
+                      <input type="text"  placeholder="Enter image link"  name="imgl" required>
+                    </div>
+                  
+                       
+                        <input type="submit" value="Submit" class="btn btn-success ">
+ 
+  
+  </form>
+
+</div>
+</center>
+  </body>
+  </html>
